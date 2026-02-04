@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment - Swathi Fitness World</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ✅ NAVBAR -->
+  <header class="navbar">
+    <a href="index.html" class="logo">SWATHI FITNESS WORLD</a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="plans.html" class="active">Plans</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="auth.html">Login</a></li>
+    </ul>
+  </header>
+
+  <!-- ✅ PAYMENT SECTION -->
+  <section class="payment-page">
+
+    <div class="payment-container">
+
+      <!-- ✅ Summary -->
+      <div class="payment-summary">
+        <h2>Billing Summary</h2>
+        <p class="small-text">Review your plan before payment.</p>
+
+        <div class="summary-box">
+          <p><strong>Selected Plan:</strong> <span id="planName">Pro</span></p>
+          <p><strong>Price:</strong> ₹<span id="planPrice">4999</span> / month</p>
+          <p><strong>GST (18%):</strong> ₹<span id="gstAmount">0</span></p>
+          <hr style="opacity:0.2;">
+          <p class="total-pay">
+            Total Pay: ₹<span id="finalAmount">0</span>
+          </p>
+        </div>
+
+        <p style="margin-top:12px; color:#ccc; font-size:13px;">
+          ✅ After payment your membership will be activated.
+        </p>
+      </div>
+
+      <!-- ✅ Payment Form -->
+      <div class="payment-form-card">
+        <h2>Payment Details</h2>
+        <p class="small-text">Enter your billing details securely.</p>
+
+        <form id="paymentForm" class="payment-form">
+
+          <input type="text" placeholder="Full Name" required />
+          <input type="email" placeholder="Email Address" required />
+          <input type="text" placeholder="Phone Number" required />
+
+          <select required>
+            <option value="" disabled selected>Select Payment Method</option>
+            <option>UPI</option>
+            <option>Debit Card</option>
+            <option>Credit Card</option>
+            <option>Net Banking</option>
+          </select>
+
+          <input type="text" placeholder="UPI ID / Card Number" required />
+          <input type="text" placeholder="City" required />
+
+          <button type="submit" class="btn-primary" style="width:100%;">Pay Now</button>
+        </form>
+
+        <p id="payMsg" style="margin-top:12px; text-align:center;"></p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <script>
+    // ✅ Read plan from URL
+    const params = new URLSearchParams(window.location.search);
+    const plan = params.get("plan") || "Pro";
+    const price = Number(params.get("price")) || 4999;
+
+    document.getElementById("planName").innerText = plan;
+    document.getElementById("planPrice").innerText = price;
+
+    const gst = Math.round(price * 0.18);
+    const total = price + gst;
+
+    document.getElementById("gstAmount").innerText = gst;
+    document.getElementById("finalAmount").innerText = total;
+
+    // ✅ Fake payment success
+    const paymentForm = document.getElementById("paymentForm");
+    const payMsg = document.getElementById("payMsg");
+
+    paymentForm.addEventListener("submit", function(e){
+      e.preventDefault();
+      payMsg.style.color = "lime";
+      payMsg.innerText = "✅ Payment Successful! Membership Activated 🎉";
+
+      setTimeout(() => {
+        window.location.href = "auth.html";
+      }, 2000);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Royal Fitness</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">ROYAL FITNESS</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="trainers.html">Trainers</a></li>
+        <li><a href="plans.html">Plans</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="login.html" class="btn-login">Login</a>
+  </header>
+
+  <!-- LOGIN SECTION -->
+  <section class="plans-page" style="min-height: 80vh; display: flex; justify-content: center; align-items: center;">
+    <div class="plan-card" style="max-width: 400px; width: 100%;">
+      <h2 style="text-align: center; margin-bottom: 20px;">Login</h2>
+      
+      <form id="loginForm" style="display: flex; flex-direction: column; gap: 15px;">
+        <select name="userType" required class="custom-select">
+    <option value="" disabled selected>Select User Type</option>
+    <option value="member">Member</option>
+    <option value="trainer">Trainer</option>
+    <option value="owner">Owner</option>
+</select>
+
+        <input type="email" placeholder="Email" required style="padding: 12px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: #fff;">
+        <input type="password" placeholder="Password" required style="padding: 12px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: #fff;">
+        <button type="submit" class="plan-btn">Login</button>
+      </form>
+
+      <p style="text-align: center; margin-top: 15px; color: #ccc;">
+        Don't have an account? <a href="signup.html" style="color: #ff2e2e;">Sign Up</a>
+      </p>
+    </div>
+  </section>
+
+  <script>
+    const loginForm = document.getElementById('loginForm');
+    loginForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      const userType = loginForm.userType.value;
+      if(userType === "member"){
+        window.location.href = 'user-dashboard.html';
+      } else if(userType === "trainer"){
+        window.location.href = 'trainer-dashboard.html';
+      } else if(userType === "owner"){
+        window.location.href = 'owner-dashboard.html';
+      } else {
+        alert('Please select a user type.');
+      }
+    });
+  </script>
+
+</body>
+</html>

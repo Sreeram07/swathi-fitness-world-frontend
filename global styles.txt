@@ -1,0 +1,132 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+}
+
+h1, h2, h3 {
+  color: #0f172a;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+.dash-header {
+  background: #0f172a;
+  color: #fff;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dash-header h1 {
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-info button {
+  background: #f59e0b;
+  border: none;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.user-info button:hover {
+  background: #d97706;
+}
+
+/* Main dashboard */
+.dash-main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Stats cards */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card h3 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.highlight {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f59e0b;
+}
+
+/* Workout Tracker */
+.workout-tracker h2 {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.workout-tracker table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.workout-tracker th, 
+.workout-tracker td {
+  padding: 15px 20px;
+  text-align: left;
+}
+
+.workout-tracker thead {
+  background: #0f172a;
+  color: #fff;
+  font-weight: 600;
+}
+
+.workout-tracker tbody tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+/* Footer */
+.dash-footer {
+  background: #0f172a;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+}

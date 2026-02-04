@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swathi Fitness World - Login / Signup</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: radial-gradient(circle at top, rgba(255,46,46,0.25), transparent 55%),
+                  linear-gradient(135deg, #0f0f0f, #1c1c1c);
+      padding: 20px;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 440px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      padding: 35px 30px;
+      border-radius: 18px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .brand-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255,46,46,0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: #ff2e2e;
+      border: 1px solid rgba(255,46,46,0.35);
+      user-select: none;
+    }
+
+    .brand-title {
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      line-height: 1.2;
+    }
+
+    .brand-title span { color: #ff2e2e; }
+
+    .subtext {
+      text-align: center;
+      font-size: 13px;
+      color: #ccc;
+      margin-bottom: 18px;
+      line-height: 1.4;
+    }
+
+    form h2 {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 22px;
+      color: #ff2e2e;
+    }
+
+    form input, form select {
+      width: 100%;
+      padding: 13px;
+      margin-bottom: 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.18);
+      outline: none;
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      font-size: 14px;
+      transition: 0.2s ease;
+    }
+
+    form input:focus, form select:focus {
+      border-color: rgba(255,46,46,0.7);
+      box-shadow: 0 0 0 3px rgba(255,46,46,0.15);
+    }
+
+    form input::placeholder { color: #ddd; }
+    form select option { color: #000; }
+
+    form button {
+      width: 100%;
+      padding: 13px;
+      margin-top: 8px;
+      background: #ff2e2e;
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    form button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(255,46,46,0.35);
+    }
+
+    form p {
+      margin-top: 14px;
+      text-align: center;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    form p a {
+      color: #ff2e2e;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    #message {
+      text-align: center;
+      margin-top: 14px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .bottom-links {
+      margin-top: 18px;
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      font-size: 13px;
+    }
+
+    .bottom-links a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .bottom-links a:hover { color: #ff2e2e; }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="brand-row">
+      <div class="brand-logo">S</div>
+      <a class="brand-title" href="index.html">
+        SWATHI <span>FITNESS</span> WORLD
+      </a>
+    </div>
+
+    <p class="subtext">
+      Login to book sessions and track your progress 🚀
+    </p>
+
+    <form id="loginForm">
+      <h2>Login</h2>
+
+      <input type="email" placeholder="Email" name="email" required />
+      <input type="password" placeholder="Password" name="password" required />
+
+      <select name="role" required>
+        <option value="" disabled selected>Select Role</option>
+        <option value="member">Member</option>
+        <option value="trainer">Trainer</option>
+        <option value="owner">Owner</option>
+      </select>
+
+      <button type="submit">Login</button>
+      <p>New user? <a href="#" id="showSignup">Sign up</a></p>
+    </form>
+
+    <form id="signupForm" style="display:none;">
+      <h2>Sign Up</h2>
+
+      <input type="text" placeholder="Full Name" name="name" required />
+      <input type="email" placeholder="Email" name="email" required />
+      <input type="password" placeholder="Password" name="password" required />
+
+      <select name="role" required>
+        <option value="" disabled selected>Select Role</option>
+        <option value="member">Member</option>
+        <option value="trainer">Trainer</option>
+        <option value="owner">Owner</option>
+      </select>
+
+      <button type="submit">Sign Up</button>
+      <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+    </form>
+
+    <p id="message"></p>
+
+    <div class="bottom-links">
+      <a href="index.html">← Back to Home</a>
+      <a href="contact.html">Contact</a>
+      <a href="plans.html">Plans</a>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

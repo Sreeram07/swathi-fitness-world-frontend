@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Owner Dashboard - Swathi Fitness World</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ✅ DASHBOARD NAVBAR -->
+  <header class="dash-header">
+    <a href="index.html" class="dash-brand">SWATHI FITNESS WORLD</a>
+
+    <div class="dash-user">
+      <div class="dash-user-text">
+        <span class="small-muted">Owner Panel</span>
+        <strong id="ownerName">Owner</strong>
+      </div>
+
+      <button class="dash-logout-btn" onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <!-- ✅ MAIN DASHBOARD -->
+  <main class="dash-main">
+
+    <!-- ✅ Stats Cards -->
+    <section class="dash-stats-grid">
+      <div class="dash-stat-card">
+        <p class="dash-stat-title">Total Members</p>
+        <h2 class="dash-stat-value" id="totalMembers">0</h2>
+        <p class="dash-stat-sub">Active gym members</p>
+      </div>
+
+      <div class="dash-stat-card">
+        <p class="dash-stat-title">Total Trainers</p>
+        <h2 class="dash-stat-value" id="totalTrainers">0</h2>
+        <p class="dash-stat-sub">Certified trainers</p>
+      </div>
+
+      <div class="dash-stat-card">
+        <p class="dash-stat-title">Today’s Bookings</p>
+        <h2 class="dash-stat-value" id="todayBookings">0</h2>
+        <p class="dash-stat-sub">Sessions scheduled</p>
+      </div>
+
+      <div class="dash-stat-card">
+        <p class="dash-stat-title">Monthly Revenue</p>
+        <h2 class="dash-stat-value">₹45,000</h2>
+        <p class="dash-stat-sub">Estimated revenue</p>
+      </div>
+    </section>
+
+    <!-- ✅ Table Section -->
+    <section class="dash-table-section">
+
+      <div class="dash-table-top">
+        <div>
+          <h2 class="dash-title">Manage Trainers & Members</h2>
+          <p class="dash-subtitle">
+            View members, trainers, plans, and active status in one place.
+          </p>
+        </div>
+
+        <div class="dash-controls">
+          <input
+            type="text"
+            id="searchInput"
+            class="dash-search"
+            placeholder="Search name / role / plan..."
+          />
+
+          <select id="roleFilter" class="dash-select">
+            <option value="all">All Roles</option>
+            <option value="member">Members</option>
+            <option value="trainer">Trainers</option>
+            <option value="owner">Owner</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- ✅ Table -->
+      <div class="dash-table-wrapper">
+        <table class="dash-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Role</th>
+              <th>Plan / Access</th>
+              <th>Status</th>
+              <th>Last Active</th>
+              <th style="text-align:center;">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="usersTableBody">
+            <!-- Rows added by JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ✅ FOOTER -->
+  <footer class="dash-footer">
+    <p>© 2026 Swathi Fitness World — All rights reserved</p>
+  </footer>
+
+  <!-- ✅ Script -->
+  <script src="script.js"></script>
+
+  <script>
+    // ✅ Demo Data (later we will fetch from MongoDB)
+   
+
+    const usersTableBody = document.getElementById("usersTableBody");
+    const searchInput = document.getElementById("searchInput");
+    const roleFilter = document.getElementById("roleFilter");
+
+    const totalMembers = document.getElementById("totalMembers");
+    const totalTrainers = document.getElementById("totalTrainers");
+    const todayBookings = document.getElementById("todayBookings");
+    const ownerName = document.getElementById("ownerName");
+
+    // ✅ Show logged owner name from localStorage (if exists)
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    if (currentUser && currentUser.role === "owner") {
+      ownerName.innerText = currentUser.name;
+    }
+
+    // ✅ Stats update
+    function updateStats(data) {
+      totalMembers.innerText = data.filter(u => u.role === "member").length;
+      totalTrainers.innerText = data.filter(u => u.role === "trainer").length;
+      todayBookings.innerText = 5; // demo
+    }
+
+    // ✅ Table render
+    function renderTable(data) {
+      usersTableBody.innerHTML = "";
+
+      data.forEach((u, index) => {
+        const tr = document.createElement("tr");
+
+        tr.innerHTML = `
+          <td>${u.name}</td>
+          <td><span class="badge badge-${u.role}">${u.role}</span></td>
+          <td>${u.plan}</td>
+          <td><span class="status ${u.status === "Active" ? "status-active" : "status-offline"}">${u.status}</span></td>
+          <td>${u.lastActive}</td>
+          <td style="text-align:center;">
+            <button class="table-btn edit-btn" onclick="handleEdit(${index})">Edit</button>
+            <button class="table-btn delete-btn" onclick="handleDelete(${index})">Delete</button>
+          </td>
+        `;
+
+        usersTableBody.appendChild(tr);
+      });
+
+      updateStats(data);
+    }
+
+    // ✅ Search + filter
+    function applyFilters() {
+      const searchText = searchInput.value.toLowerCase();
+      const roleValue = roleFilter.value;
+
+      const filtered = demoUsers.filter(user => {
+        const matchesSearch =
+          user.name.toLowerCase().includes(searchText) ||
+          user.role.toLowerCase().includes(searchText) ||
+          user.plan.toLowerCase().includes(searchText);
+
+        const matchesRole = roleValue === "all" ? true : user.role === roleValue;
+
+        return matchesSearch && matchesRole;
+      });
+
+      renderTable(filtered);
+    }
+
+    // ✅ Demo edit / delete
+    function handleEdit(index) {
+      alert("✅ Edit clicked for: " + demoUsers[index].name);
+    }
+
+    function handleDelete(index) {
+      const confirmDelete = confirm("Are you sure you want to delete " + demoUsers[index].name + "?");
+      if (!confirmDelete) return;
+
+      demoUsers.splice(index, 1);
+      applyFilters();
+    }
+
+    // ✅ Events
+    searchInput.addEventListener("input", applyFilters);
+    roleFilter.addEventListener("change", applyFilters);
+
+    // ✅ Init
+    renderTable(demoUsers);
+  </script>
+
+</body>
+</html>

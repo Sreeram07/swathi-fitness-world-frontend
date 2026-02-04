@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Royal Fitness</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">ROYAL FITNESS</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="trainers.html">Trainers</a></li>
+        <li><a href="plans.html">Plans</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="login.html" class="btn-login">Login</a>
+  </header>
+
+  <!-- SIGNUP SECTION -->
+  <section class="plans-page" style="min-height: 80vh; display: flex; justify-content: center; align-items: center;">
+    <div class="plan-card" style="max-width: 400px; width: 100%;">
+      <h2 style="text-align: center; margin-bottom: 20px;">Sign Up</h2>
+
+      <form id="signupForm" style="display: flex; flex-direction: column; gap: 15px;">
+        <select name="userType" required style="padding: 12px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: #fff;">
+          <option value="" disabled selected>Select User Type</option>
+          <option value="member">Member</option>
+          <option value="trainer">Trainer</option>
+          <option value="owner">Owner</option>
+        </select>
+        <input type="text" placeholder="Full Name" required style="padding: 12px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: #fff;">
+        <input type="email" placeholder="Email" required style="padding: 12px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: #fff;">
+        <input type="password" placeholder="Password" required style="padding: 12px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: #fff;">
+        <input type="password" placeholder="Confirm Password" required style="padding: 12px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: #fff;">
+        <button type="submit" class="plan-btn">Sign Up</button>
+      </form>
+
+      <p style="text-align: center; margin-top: 15px; color: #ccc;">
+        Already have an account? <a href="login.html" style="color: #ff2e2e;">Login</a>
+      </p>
+    </div>
+  </section>
+
+  <script>
+    const signupForm = document.getElementById('signupForm');
+    signupForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      const userType = signupForm.userType.value;
+      alert(`Signed up as ${userType}!`);
+      // Optionally redirect to login page
+      window.location.href = 'login.html';
+    });
+  </script>
+
+</body>
+</html>

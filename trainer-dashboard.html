@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trainer Dashboard - Royal Fitness</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="dash-header">
+    <h1>Royal Fitness</h1>
+    <div class="user-info">
+      <span>Hi, <strong>Trainer Jane</strong></span>
+      <button class="dash-logout-btn" onclick="logout()">Logout</button>
+
+    </div>
+  </header>
+
+  <main class="dash-main">
+    <!-- Dashboard stats -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3>Assigned Clients</h3>
+        <p class="highlight">12 Clients</p>
+      </div>
+      <div class="stat-card">
+        <h3>Weekly Sessions</h3>
+        <p class="highlight">18 / 20</p>
+      </div>
+      <div class="stat-card">
+        <h3>Feedback Received</h3>
+        <p class="highlight">45</p>
+      </div>
+    </div>
+
+    <!-- Client List -->
+    <section class="workout-tracker">
+      <h2>Client List & Progress</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Client</th>
+            <th>Plan</th>
+            <th>Last Session</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John Doe</td>
+            <td>Pro</td>
+            <td>05-Dec-2025</td>
+            <td>Good progress</td>
+          </tr>
+          <tr>
+            <td>Mary Smith</td>
+            <td>Basic</td>
+            <td>04-Dec-2025</td>
+            <td>Needs motivation</td>
+          </tr>
+          <tr>
+            <td>David Lee</td>
+            <td>Premium</td>
+            <td>03-Dec-2025</td>
+            <td>Excellent form</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="dash-footer">
+    <p>© Royal Fitness 2025 — All rights reserved</p>
+  </footer>
+
+</body>
+</html>

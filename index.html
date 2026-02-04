@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Swathi Fitness World</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar">
+    <a href="index.html" class="logo">SWATHI FITNESS WORLD</a>
+
+    <ul class="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#trainers">Trainers</a></li>
+      <li><a href="#plans">Plans</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="auth.html">Login</a></li>
+    </ul>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1>UNLOCK YOUR <span>BEST BODY</span></h1>
+      <p>Professional trainers & personalized workouts</p>
+
+      <div style="margin-top: 20px; display:flex; gap: 12px; justify-content:center; flex-wrap: wrap;">
+        <a href="#plans" class="btn-primary">Join Now</a>      
+        <a href="index.html?book=1&trainer=Neha%20Verma" class="trainer-btn-new">Book Session</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT PREVIEW ================= -->
+  <section class="about-container" id="about">
+    <div class="about-text">
+      <h1>About <span>Swathi Fitness World</span></h1>
+
+      <p>
+        Swathi Fitness World is a premium gym focused on strength, confidence,
+        and long-term health. We offer modern equipment, certified trainers,
+        and personalized workout & nutrition plans.
+      </p>
+
+      <p>
+        Whether you want to lose fat, gain muscle, or improve endurance,
+        we design programs tailored just for YOU.
+      </p>
+
+      <div class="stats">
+        <div class="stat-box">
+          <h2>10+</h2>
+          <p>Years Experience</p>
+        </div>
+        <div class="stat-box">
+          <h2>10+</h2>
+          <p>Expert Trainers</p>
+        </div>
+        <div class="stat-box">
+          <h2>3000+</h2>
+          <p>Happy Members</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1554284126-aa88f22d8b74" alt="Gym">
+    </div>
+  </section>
+
+  <!-- ================= SERVICES PREVIEW ================= -->
+  <section class="services-page" id="services">
+    <h1 class="section-title">Our <span>Services</span></h1>
+
+    <div class="services-grid">
+
+      <div class="card service-card">
+        <div class="service-icon">💪</div>
+        <h3>Personal Training</h3>
+        <p>One-on-one expert coaching to reach goals faster.</p>
+      </div>
+
+      <div class="card service-card">
+        <div class="service-icon">🔥</div>
+        <h3>Weight Loss</h3>
+        <p>Fat-burning programs with diet guidance.</p>
+      </div>
+
+      <div class="card service-card">
+        <div class="service-icon">🏋️</div>
+        <h3>Strength Training</h3>
+        <p>Build lean muscle and improve performance.</p>
+      </div>
+
+      <div class="card service-card">
+        <div class="service-icon">🥗</div>
+        <h3>Nutrition Plans</h3>
+        <p>Customized meal plans for your transformation.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= TRAINERS SECTION ================= -->
+<section class="trainers-container" id="trainers">
+  <h1 class="section-title">Our <span>Trainers</span></h1>
+
+  <div class="trainer-grid-new">
+
+    <!-- Trainer 1 -->
+    <div class="trainer-card-new">
+      <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883" alt="Trainer Arjun Patel">
+      <div class="trainer-info">
+        <h3>Arjun Patel</h3>
+        <p>Strength & Conditioning Coach</p>
+
+        <div class="trainer-mini-details">
+          <span>🏋️ Strength</span>
+          <span>⚡ Performance</span>
+          <span>✅ Form Focus</span>
+        </div>
+
+        <a href="index.html?book=1&trainer=Arjun%20Patel" class="trainer-btn-new">
+          Book Session
+        </a>
+      </div>
+    </div>
+
+    <!-- Trainer 2 -->
+    <div class="trainer-card-new">
+      <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b" alt="Trainer Riya Sharma">
+      <div class="trainer-info">
+        <h3>Riya Sharma</h3>
+        <p>Fat Loss Transformation Expert</p>
+
+        <div class="trainer-mini-details">
+          <span>🔥 Fat Loss</span>
+          <span>🥗 Diet</span>
+          <span>📈 Progress</span>
+        </div>
+
+        <a href="index.html?book=1&trainer=Riya%20Sharma" class="trainer-btn-new">
+          Book Session
+        </a>
+      </div>
+    </div>
+
+    <!-- Trainer 3 -->
+    <div class="trainer-card-new">
+      <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1" alt="Trainer Manish Kumar">
+      <div class="trainer-info">
+        <h3>Manish Kumar</h3>
+        <p>Certified Fitness Trainer</p>
+
+        <div class="trainer-mini-details">
+          <span>💪 Muscle</span>
+          <span>🧠 Discipline</span>
+          <span>✅ Coaching</span>
+        </div>
+
+        <a href="index.html?book=1&trainer=Manish%20Kumar" class="trainer-btn-new">
+          Book Session
+        </a>
+      </div>
+    </div>
+
+    <!-- Trainer 4 -->
+    <div class="trainer-card-new">
+      <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110" alt="Trainer Neha Verma">
+      <div class="trainer-info">
+        <h3>Neha Verma</h3>
+        <p>Zumba & Aerobics Coach</p>
+
+        <div class="trainer-mini-details">
+          <span>🎶 Zumba</span>
+          <span>🔥 Calories</span>
+          <span>🤝 Group</span>
+        </div>
+
+        <a href="index.html?book=1&trainer=Neha%20Verma" class="trainer-btn-new">
+          Book Session
+        </a>
+      </div>
+    </div>
+
+    <!-- Trainer 5 -->
+    <div class="trainer-card-new">
+      <img src="https://images.unsplash.com/photo-1605296867724-fa87a8ef53fd" alt="Trainer Rohit Singh">
+      <div class="trainer-info">
+        <h3>Rohit Singh</h3>
+        <p>Bodybuilding Specialist</p>
+
+        <div class="trainer-mini-details">
+          <span>🏆 Bodybuilding</span>
+          <span>💥 Power</span>
+          <span>🍗 Bulk</span>
+        </div>
+
+        <a href="index.html?book=1&trainer=Rohit%20Singh" class="trainer-btn-new">
+          Book Session
+        </a>
+      </div>
+    </div>
+
+    <!-- Trainer 6 -->
+    <div class="trainer-card-new">
+      <img src="https://images.unsplash.com/photo-1554344728-77cf90d9ed26" alt="Trainer Sneha Rao">
+      <div class="trainer-info">
+        <h3>Sneha Rao</h3>
+        <p>Nutrition & Lifestyle Coach</p>
+
+        <div class="trainer-mini-details">
+          <span>🥗 Nutrition</span>
+          <span>🧘 Lifestyle</span>
+          <span>✅ Healthy</span>
+        </div>
+
+        <a href="index.html?book=1&trainer=Sneha%20Rao" class="trainer-btn-new">
+          Book Session
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= PLANS ================= -->
+<section class="plans-page" id="plans">
+
+  <h2 class="section-title">Our <span>Plans</span></h2>
+  <p class="section-subtitle">
+    Monthly plans | GST included | No hidden charges
+  </p>
+
+  <div class="home-plans-grid">
+
+    <!-- BASIC -->
+    <div class="home-plan-card">
+      <h3>Basic</h3>
+      <p class="price">₹2,999 <span>/ month</span></p>
+
+      <ul class="plan-features">
+        <li>Gym Access</li>
+        <li>Cardio Equipment</li>
+        <li>Flexible Timings</li>
+        <li>❌ Personal Trainer</li>
+      </ul>
+
+      <p class="plan-note">Best for beginners</p>
+
+      <a
+        href=#contact
+        class="btn-plan"
+        target="_blank">
+        Join Now
+      </a>
+    </div>
+
+    <!-- PRO -->
+    <div class="home-plan-card featured">
+      <div class="popular-badge">Most Popular</div>
+
+      <h3>Pro</h3>
+      <p class="price">₹4,999 <span>/ month</span></p>
+
+      <ul class="plan-features">
+        <li>Gym + Cardio Access</li>
+        <li>Personal Trainer</li>
+        <li>Diet & Nutrition Guidance</li>
+        <li>Progress Tracking</li>
+      </ul>
+
+      <p class="plan-note">Ideal for transformation</p>
+
+      <a
+        href=#contact
+        class="btn-plan primary"
+        target="_blank">
+        Join Now
+      </a>
+    </div>
+
+    <!-- ELITE -->
+    <div class="home-plan-card">
+      <h3>Elite</h3>
+      <p class="price">₹9,999 <span>/ month</span></p>
+
+      <ul class="plan-features">
+        <li>1-on-1 Coaching</li>
+        <li>Custom Workout & Diet</li>
+        <li>Complete Transformation</li>
+        <li>Priority Trainer Support</li>
+      </ul>
+
+      <p class="plan-note">For serious fitness goals</p>
+
+      <a
+        href=#contact
+        class="btn-plan"
+        target="_blank">
+        Join Now
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- ================= CONTACT PREVIEW ================= -->
+  <section class="contact-page" id="contact">
+
+  <h1 class="contact-title">
+    Get in <span>Touch</span>
+  </h1>
+
+  <p class="contact-subtitle">
+    Visit us or contact us to start your fitness journey
+  </p>
+
+  <div class="contact-grid">
+
+    <!-- LEFT CARD -->
+    <div class="contact-card">
+
+      <h3>📍 Address</h3>
+      <p>
+        2nd and 3rd Floor, Gurukrupa Complex,<br>
+        Above More Super Mart, Near IDBI Bank,<br>
+        Opposite Upitu Hotel, Solapur Road,<br>
+        Vijayapura, Karnataka – 586101
+      </p>
+
+      <p class="contact-info">
+        📞 <strong>Phone:</strong> +91 99803 96269
+      </p>
+
+      <p class="contact-info">
+        ✉️ <strong>Email:</strong> swathimrjjp@gmail.com
+      </p>
+
+      <div class="contact-buttons">
+        <a
+          href="https://wa.me/+919980396269"
+          target="_blank"
+          class="btn-contact">
+          WhatsApp Us
+        </a>
+
+        <a
+          href="tel:+919980396269"
+          class="btn-contact outline">
+          Call Now
+        </a>
+      </div>
+
+    </div>
+
+    <!-- RIGHT CARD -->
+    <div class="contact-card">
+
+      <iframe
+        src="https://www.google.com/maps?q=Gurukrupa%20Complex%20Vijayapura&output=embed"
+        loading="lazy"
+        allowfullscreen>
+      </iframe>
+
+      <a
+        href="https://www.google.com/maps/search/?api=1&query=Gurukrupa+Complex+Vijayapura"
+        target="_blank"
+        class="btn-contact map-btn">
+        Open in Google Maps
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+ <!-- ✅ Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <h3 class="footer-title">Swathi Fitness World</h3>
+        <p class="footer-text">
+          Get trained by experts, build confidence, and stay consistent.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="footer-subtitle">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#plans">Plans</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-subtitle">Contact</h4>
+        <p class="footer-text">
+          📞 <a href="tel:+919980396269">+91 99803 96269</a><br>
+          ✉️ <a href="mailto:swathimrjjp@gmail.com">swathimrjjp@gmail.com</a>
+        </p>
+      </div>
+    </div>
+
+    <p class="footer-bottom">
+      © 2026 Swathi Fitness World. All Rights Reserved.
+    </p>
+  </footer>
+
+  <!-- ================= BOOK SESSION MODAL ================= -->
+  <div class="modal" id="bookingModal">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h2>Book Your Session</h2>
+        <button class="close-btn" id="closeBooking">&times;</button>
+      </div>
+
+      <form id="bookingForm" class="booking-form">
+
+        <label>Trainer</label>
+        <select id="trainerSelect" required>
+          <option value="" disabled selected>Select Trainer</option>
+          <option>Arjun Patel</option>
+          <option>Riya Sharma</option>
+          <option>Mohit Kumar</option>
+        </select>
+
+        <label>Date</label>
+        <input type="date" required />
+
+        <label>Time</label>
+        <input type="time" required />
+
+        <label>Duration (Hours)</label>
+        <select required>
+          <option value="" disabled selected>Select Hours</option>
+          <option>1 Hour</option>
+          <option>2 Hours</option>
+          <option>3 Hours</option>
+        </select>
+
+        <label>No of Days</label>
+        <input type="number" min="1" max="30" placeholder="Enter days" required />
+
+        <label>Workout Type</label>
+        <select required>
+          <option value="" disabled selected>Select Workout</option>
+          <option>Weight Loss</option>
+          <option>Muscle Gain</option>
+          <option>Strength Training</option>
+          <option>Cardio</option>
+        </select>
+
+        <label>Message / Notes</label>
+        <textarea placeholder="Optional: any goals or health issues"></textarea>
+
+        <button type="submit" class="btn-book">Confirm Booking</button>
+      </form>
+
+    </div>
+  </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const openBook = urlParams.get("book");
+    const trainerName = urlParams.get("trainer");
+
+    const bookingModal = document.getElementById("bookingModal");
+    const trainerSelect = document.getElementById("trainerSelect");
+
+    if (openBook === "1" && bookingModal) {
+      bookingModal.style.display = "flex";
+
+      if (trainerName && trainerSelect) {
+        const decodedTrainer = decodeURIComponent(trainerName);
+
+        for (let option of trainerSelect.options) {
+          if (option.text.trim() === decodedTrainer.trim()) {
+            option.selected = true;
+            break;
+          }
+        }
+      }
+
+      // ✅ Clean URL after opening
+      window.history.replaceState({}, document.title, "index.html");
+    }
+
+  });
+    document.addEventListener("DOMContentLoaded", function () {
+
+    const bookingModal = document.getElementById("bookingModal");
+    const closeBtn = document.getElementById("closeBooking");
+
+    // CLOSE modal on ❌ click
+    closeBtn.addEventListener("click", function () {
+      bookingModal.style.display = "none";
+    });
+
+    // CLOSE modal when clicking outside
+    window.addEventListener("click", function (e) {
+      if (e.target === bookingModal) {
+        bookingModal.style.display = "none";
+      }
+    });
+
+  });
+</script>
+<!-- ✅ Script file -->
+<script src="script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* ===== MODAL OPEN FROM TRAINERS ===== */
+  const bookingModal = document.getElementById("bookingModal");
+  const trainerSelect = document.getElementById("trainerSelect");
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const openBook = urlParams.get("book");
+  const trainerName = urlParams.get("trainer");
+
+  if (openBook === "1" && bookingModal) {
+    bookingModal.style.display = "flex";
+
+    if (trainerName && trainerSelect) {
+      const decodedTrainer = decodeURIComponent(trainerName);
+      for (let option of trainerSelect.options) {
+        if (option.text.trim() === decodedTrainer.trim()) {
+          option.selected = true;
+          break;
+        }
+      }
+    }
+
+    window.history.replaceState({}, document.title, "index.html");
+  }
+
+  /* ===== MODAL CLOSE ===== */
+  const closeBtn = document.getElementById("closeBooking");
+
+  closeBtn.addEventListener("click", function () {
+    bookingModal.style.display = "none";
+  });
+
+  window.addEventListener("click", function (e) {
+    if (e.target === bookingModal) {
+      bookingModal.style.display = "none";
+    }
+  });
+
+  /* ===== CONFIRM BOOKING → BACKEND ===== */
+  const bookingForm = document.getElementById("bookingForm");
+
+  bookingForm.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(bookingForm);
+    const data = Object.fromEntries(formData);
+
+    try {
+      const res = await fetch("http://localhost:5000/api/bookings", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+
+      const result = await res.json();
+
+      if (result.success) {
+        alert("✅ Booking Confirmed!");
+        bookingForm.reset();
+        bookingModal.style.display = "none";
+      } else {
+        alert(result.message || "❌ Booking failed");
+      }
+
+    } catch (err) {
+      alert("❌ Server error. Try again later.");
+    }
+  });
+
+});
+</script>
+
+</body>
+</html>

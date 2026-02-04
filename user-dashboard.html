@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Dashboard - Swathi Fitness World</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ✅ DASH HEADER -->
+  <header class="dash-header">
+    <a href="index.html" class="dash-brand">SWATHI FITNESS WORLD</a>
+
+    <div class="dash-user">
+      <div class="dash-user-text">
+        <span class="small-muted">Member Panel</span>
+        <strong id="memberName">Welcome</strong>
+      </div>
+
+      <button class="dash-logout-btn" onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <!-- ✅ MAIN -->
+  <main class="dash-main">
+
+    <!-- ✅ Stats Section -->
+    <section class="dash-stats-grid">
+      <div class="dash-stat-card">
+        <p class="dash-stat-title">My Plan</p>
+        <h2 class="dash-stat-value">Pro</h2>
+        <p class="dash-stat-sub">Access to all gym areas</p>
+      </div>
+
+      <div class="dash-stat-card">
+        <p class="dash-stat-title">Workouts Completed</p>
+        <h2 class="dash-stat-value">18 / 30</h2>
+        <p class="dash-stat-sub">This month</p>
+      </div>
+
+      <div class="dash-stat-card">
+        <p class="dash-stat-title">Calories Burned</p>
+        <h2 class="dash-stat-value">4500 kcal</h2>
+        <p class="dash-stat-sub">Total tracked</p>
+      </div>
+
+      <div class="dash-stat-card">
+        <p class="dash-stat-title">Progress Level</p>
+        <h2 class="dash-stat-value">72%</h2>
+        <p class="dash-stat-sub">Improving 💪</p>
+      </div>
+    </section>
+
+    <!-- ✅ Progress Card + Timetable -->
+    <section class="user-two-col">
+
+      <!-- ✅ Progress Tracker -->
+      <div class="user-card">
+        <h2 class="dash-title">My Progress</h2>
+        <p class="dash-subtitle">
+          Track your consistency and improvement week-by-week.
+        </p>
+
+        <div class="progress-wrap user-progress">
+          <div class="progress-top">
+            <span class="progress-label">Strength Improvement</span>
+            <span class="progress-percent">72%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width:72%;"></div>
+          </div>
+
+          <div class="progress-top" style="margin-top:14px;">
+            <span class="progress-label">Fat Loss Progress</span>
+            <span class="progress-percent">60%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width:60%;"></div>
+          </div>
+
+          <div class="progress-top" style="margin-top:14px;">
+            <span class="progress-label">Endurance</span>
+            <span class="progress-percent">80%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width:80%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ✅ Timetable -->
+      <div class="user-card">
+        <h2 class="dash-title">My Weekly Timetable</h2>
+        <p class="dash-subtitle">
+          Your scheduled workout plan for the week.
+        </p>
+
+        <div class="dash-table-wrapper">
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Workout</th>
+                <th>Time</th>
+                <th>Trainer</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Monday</td>
+                <td>Chest + Triceps</td>
+                <td>7:00 AM</td>
+                <td>Arjun Patel</td>
+              </tr>
+              <tr>
+                <td>Tuesday</td>
+                <td>Cardio + Core</td>
+                <td>6:30 AM</td>
+                <td>Riya Sharma</td>
+              </tr>
+              <tr>
+                <td>Wednesday</td>
+                <td>Back + Biceps</td>
+                <td>7:00 AM</td>
+                <td>Manish Kumar</td>
+              </tr>
+              <tr>
+                <td>Thursday</td>
+                <td>Legs</td>
+                <td>6:30 AM</td>
+                <td>Arjun Patel</td>
+              </tr>
+              <tr>
+                <td>Friday</td>
+                <td>HIIT + Mobility</td>
+                <td>7:00 AM</td>
+                <td>Neha Verma</td>
+              </tr>
+              <tr>
+                <td>Saturday</td>
+                <td>Full Body</td>
+                <td>8:00 AM</td>
+                <td>Rohit Singh</td>
+              </tr>
+              <tr>
+                <td>Sunday</td>
+                <td>Rest / Stretch</td>
+                <td>Anytime</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ✅ Workout Tracker Table -->
+    <section class="dash-table-section">
+      <div class="dash-table-top">
+        <div>
+          <h2 class="dash-title">Workout History</h2>
+          <p class="dash-subtitle">
+            Your recent workouts and notes.
+          </p>
+        </div>
+      </div>
+
+      <div class="dash-table-wrapper">
+        <table class="dash-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Exercise</th>
+              <th>Reps / Time</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>22-Jan-2026</td>
+              <td>Push Ups</td>
+              <td>3 x 15</td>
+              <td>Felt strong ✅</td>
+            </tr>
+            <tr>
+              <td>21-Jan-2026</td>
+              <td>Treadmill</td>
+              <td>20 mins</td>
+              <td>Good pace 🔥</td>
+            </tr>
+            <tr>
+              <td>20-Jan-2026</td>
+              <td>Squats</td>
+              <td>3 x 20</td>
+              <td>Increase weight next week</td>
+            </tr>
+            <tr>
+              <td>19-Jan-2026</td>
+              <td>Plank</td>
+              <td>3 x 45 sec</td>
+              <td>Core improving 💪</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ✅ Footer -->
+  <footer class="dash-footer">
+    <p>© 2026 Swathi Fitness World — All rights reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <script>
+    // ✅ Show logged in user name from localStorage (if exists)
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    const memberName = document.getElementById("memberName");
+
+    if (currentUser && currentUser.role === "member") {
+      memberName.innerText = currentUser.name;
+    } else {
+      memberName.innerText = "Welcome";
+    }
+  </script>
+
+</body>
+</html>

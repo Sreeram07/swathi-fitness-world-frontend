@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Swathi Fitness World</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar">
+    <a href="index.html" class="logo">SWATHI FITNESS WORLD</a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="trainers.html">Trainers</a></li>
+      <li><a href="plans.html">Plans</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="auth.html">Login</a></li>
+    </ul>
+  </header>
+
+  <!-- ================= CONTACT HERO SECTION ================= -->
+  <section class="contact-hero">
+    <div class="contact-hero-overlay"></div>
+
+    <div class="contact-hero-content">
+      <h1 class="section-title">Get in <span>Touch</span></h1>
+      <p class="section-subtitle">
+        We’re here to answer your questions and help you start your fitness journey 💪
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT MAIN ================= -->
+  <section class="contact-main">
+
+    <div class="contact-grid">
+
+      <!-- ✅ Contact Form -->
+      <div class="contact-form-card">
+        <h2>Send Us a Message</h2>
+        <p class="small-text">Fill the form and our team will contact you soon.</p>
+
+        <form class="contact-form" id="contactForm">
+          <input type="text" id="name" placeholder="Your Name" required>
+          <input type="email" id="email" placeholder="Your Email" required>
+          <textarea id="msg" rows="6" placeholder="Your Message" required></textarea>
+
+          <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>
+
+          <p class="success-msg" id="successMsg">✅ Thank you! Your message has been sent.</p>
+        </form>
+      </div>
+
+      <!-- ✅ Contact Info + Map -->
+      <div class="contact-info-card">
+        <h2>Contact Details</h2>
+        <p class="small-text">Visit us or call us anytime.</p>
+
+        <div class="info-lines">
+          <p><strong>📍 Address:</strong> Swathi Fitness World, Jayanagar, Bengaluru</p>
+          <p><strong>✉️ Email:</strong> <a href="mailto:swathifitnessworld@gmail.com">swathifitnessworld@gmail.com</a></p>
+          <p><strong>📞 Phone:</strong> <a href="tel:+919999999999">+91 99999 99999</a></p>
+          <p><strong>🕒 Timings:</strong> Mon-Sat: 6AM - 10PM | Sun: 7AM - 12PM</p>
+        </div>
+
+        <!-- ✅ MAP -->
+        <div class="map-box">
+          <iframe
+            src="https://www.google.com/maps?q=Jayanagar,Bangalore&output=embed"
+            width="100%"
+            height="260"
+            style="border:0; border-radius:14px;"
+            allowfullscreen=""
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= BIG FOOTER ================= -->
+  <footer class="big-footer">
+    <div class="footer-grid">
+
+      <div class="footer-col">
+        <h3>Swathi Fitness World</h3>
+        <p>
+          Strong body. Strong mind. Strong lifestyle.  
+          Join us and unlock your best version.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="trainers.html">Trainers</a></li>
+          <li><a href="plans.html">Plans</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>📍 Jayanagar, Bengaluru</p>
+        <p>✉️ <a href="mailto:swathifitnessworld@gmail.com">swathifitnessworld@gmail.com</a></p>
+        <p>📞 <a href="tel:+919999999999">+91 99999 99999</a></p>
+      </div>
+
+    </div>
+
+    <p class="footer-bottom">
+      © 2026 Swathi Fitness World. All Rights Reserved.
+    </p>
+  </footer>
+
+  <script>
+    // Simple success message (frontend only)
+    const contactForm = document.getElementById("contactForm");
+    const successMsg = document.getElementById("successMsg");
+
+    contactForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+      successMsg.style.display = "block";
+      contactForm.reset();
+
+      setTimeout(() => {
+        successMsg.style.display = "none";
+      }, 2500);
+    });
+  </script>
+
+</body>
+</html>
