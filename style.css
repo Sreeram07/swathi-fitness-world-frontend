@@ -818,3 +818,477 @@ body {
 .map-btn {
   display: inline-block;
 }
+/* ================================
+   USER DASHBOARD – PREMIUM UI
+================================ */
+
+/* ----- Page base ----- */
+body {
+  background: radial-gradient(circle at top, rgba(255,46,46,0.12), transparent 55%),
+              linear-gradient(135deg, #0b0b0b, #141414);
+  color: #fff;
+}
+
+/* ----- Header ----- */
+.dash-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.dash-brand {
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #ff2e2e;
+  text-decoration: none;
+}
+
+.dash-user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.small-muted {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.dash-logout-btn {
+  background: transparent;
+  border: 1px solid rgba(255,46,46,0.6);
+  color: #ff2e2e;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.dash-logout-btn:hover {
+  background: #ff2e2e;
+  color: #fff;
+}
+
+/* ----- Main layout ----- */
+.dash-main {
+  padding: 40px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* ----- Stats cards ----- */
+.dash-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.dash-stat-card {
+  background: linear-gradient(145deg, #1a1a1a, #101010);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+  transition: transform 0.25s ease;
+}
+
+.dash-stat-card:hover {
+  transform: translateY(-4px);
+}
+
+.dash-stat-title {
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 6px;
+}
+
+.dash-stat-value {
+  font-size: 28px;
+  font-weight: 800;
+  color: #ff2e2e;
+}
+
+.dash-stat-sub {
+  font-size: 13px;
+  color: #888;
+}
+
+/* ----- Two column section ----- */
+.user-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 900px) {
+  .user-two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ----- Cards ----- */
+.user-card {
+  background: rgba(255,255,255,0.04);
+  border-radius: 20px;
+  padding: 26px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+}
+
+.dash-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.dash-subtitle {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+/* ----- Progress bars ----- */
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff2e2e, #ff6a6a);
+  border-radius: 20px;
+  transition: width 0.6s ease;
+}
+
+.progress-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #ddd;
+  margin-bottom: 6px;
+}
+
+/* ----- Tables ----- */
+.dash-table-section {
+  margin-bottom: 40px;
+}
+
+.dash-table-wrapper {
+  overflow-x: auto;
+}
+
+.dash-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  min-width: 650px;
+}
+
+.dash-table th {
+  text-align: left;
+  font-size: 13px;
+  padding: 14px;
+  color: #ff2e2e;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.dash-table td {
+  padding: 14px;
+  font-size: 14px;
+  color: #ddd;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.dash-table tr:hover {
+  background: rgba(255,255,255,0.04);
+}
+
+/* ----- Footer ----- */
+.dash-footer {
+  text-align: center;
+  padding: 18px;
+  font-size: 13px;
+  color: #777;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+/* ================================
+   TRAINER DASHBOARD – PREMIUM UI
+================================ */
+
+/* ----- Header ----- */
+.dash-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.dash-header h1 {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #ff2e2e;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #ddd;
+}
+
+/* ----- Main ----- */
+.dash-main {
+  padding: 40px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+/* ----- Stats Grid ----- */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: linear-gradient(145deg, #1a1a1a, #101010);
+  padding: 24px;
+  border-radius: 18px;
+  box-shadow: 0 18px 35px rgba(0,0,0,0.65);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 45px rgba(0,0,0,0.75);
+}
+
+.stat-card h3 {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.highlight {
+  font-size: 26px;
+  font-weight: 800;
+  color: #ff2e2e;
+}
+
+/* ----- Client Table Section ----- */
+.workout-tracker {
+  background: rgba(255,255,255,0.04);
+  padding: 28px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+}
+
+.workout-tracker h2 {
+  font-size: 22px;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+/* ----- Table ----- */
+.workout-tracker table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  min-width: 650px;
+}
+
+.workout-tracker th {
+  text-align: left;
+  padding: 14px;
+  font-size: 13px;
+  color: #ff2e2e;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.workout-tracker td {
+  padding: 14px;
+  font-size: 14px;
+  color: #ddd;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.workout-tracker tr:hover {
+  background: rgba(255,255,255,0.04);
+}
+
+/* ----- Footer ----- */
+.dash-footer {
+  text-align: center;
+  padding: 18px;
+  font-size: 13px;
+  color: #777;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin-top: 40px;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 768px) {
+  .dash-header {
+    padding: 16px 22px;
+  }
+
+  .dash-main {
+    padding: 24px;
+  }
+}
+/* ================================
+   OWNER DASHBOARD – PREMIUM ADMIN UI
+================================ */
+
+/* ----- Controls (Search + Filter) ----- */
+.dash-controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.dash-search,
+.dash-select {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+}
+
+.dash-search::placeholder {
+  color: #bbb;
+}
+
+.dash-search:focus,
+.dash-select:focus {
+  border-color: rgba(255,46,46,0.7);
+  box-shadow: 0 0 0 3px rgba(255,46,46,0.15);
+}
+
+/* ----- Role Badges ----- */
+.badge {
+  padding: 4px 10px;
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.badge-member {
+  background: rgba(0, 200, 120, 0.18);
+  color: #4dffb2;
+}
+
+.badge-trainer {
+  background: rgba(0, 140, 255, 0.18);
+  color: #6cb8ff;
+}
+
+.badge-owner {
+  background: rgba(255, 46, 46, 0.18);
+  color: #ff6a6a;
+}
+
+/* ----- Status Pills ----- */
+.status {
+  padding: 4px 10px;
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-active {
+  background: rgba(0, 200, 120, 0.18);
+  color: #4dffb2;
+}
+
+.status-offline {
+  background: rgba(255,255,255,0.12);
+  color: #aaa;
+}
+
+/* ----- Table Action Buttons ----- */
+.table-btn {
+  padding: 6px 12px;
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s ease;
+}
+
+.edit-btn {
+  background: rgba(0,140,255,0.18);
+  color: #6cb8ff;
+}
+
+.edit-btn:hover {
+  background: rgba(0,140,255,0.35);
+}
+
+.delete-btn {
+  background: rgba(255,46,46,0.18);
+  color: #ff6a6a;
+}
+
+.delete-btn:hover {
+  background: rgba(255,46,46,0.35);
+}
+
+/* ----- Future Booking Status (READY) ----- */
+.booking-pending {
+  background: rgba(255,180,0,0.18);
+  color: #ffcc66;
+}
+
+.booking-approved {
+  background: rgba(0,200,120,0.18);
+  color: #4dffb2;
+}
+
+.booking-completed {
+  background: rgba(0,140,255,0.18);
+  color: #6cb8ff;
+}
+
+/* ----- Owner Table Spacing ----- */
+.dash-table-section {
+  margin-bottom: 50px;
+}
+
+/* ----- Mobile Adjustments ----- */
+@media (max-width: 768px) {
+  .dash-controls {
+    width: 100%;
+  }
+
+  .dash-search,
+  .dash-select {
+    width: 100%;
+  }
+}
